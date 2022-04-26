@@ -1,6 +1,5 @@
-
 /* jscs:disable validateOrderInObjectKeys */
-export const positions = {
+const positions = {
   u: 0,
   v: 1,
   w: 2,
@@ -17,3 +16,4 @@ export const positions = {
   h: 13
 };
 /* jscs:enable validateOrderInObjectKeys */
+export { positions };

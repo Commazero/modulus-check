@@ -1,6 +1,6 @@
 {
-  "name": "modulus-check",
-  "version": "0.3.0",
+  "name": "@usecomma/modulus-check",
+  "version": "0.1.5",
   "description": "Validate a UK bank account number against a sort code using the VocaLink modulus check",
   "author": "Comma",
   "license": "MIT",

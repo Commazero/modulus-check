@@ -2,7 +2,7 @@
 Modulus checking allows payment originators to confirm that customer codes and account numbers are compatible before submitting a Bacs Direct Credit of Direct Debit.
 
 ## Status
-[![npm version][npm-image]][npm-url] [![build status][travis-image]][travis-url]
+[![npm version][npm-image]][npm-url]
 
 ## Installation
 Install the package via `yarn`:
@@ -63,6 +63,4 @@ MIT
 Many thanks to [bazerk/uk-modulus-checking](https://github.com/bazerk/uk-modulus-checking) for the original inspiration and [uphold/uk-modulus-checking](https://github.com/uphold/uk-modulus-checking) .
 
 [npm-image]: https://img.shields.io/npm/v/modulus-check.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/modulus-check
-[travis-image]: https://img.shields.io/travis/@usecomma/modulus-check.svg?style=flat-square
-[travis-url]: https://img.shields.io/travis/@usecomma/modulus-check.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/@usecomma/modulus-check

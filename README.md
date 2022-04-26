@@ -5,10 +5,14 @@ Modulus checking allows payment originators to confirm that customer codes and a
 [![npm version][npm-image]][npm-url] [![build status][travis-image]][travis-url]
 
 ## Installation
-Install the package via `npm`:
+Install the package via `yarn`:
 
 ```sh
-npm install uk-modulus-checking --save
+yarn add modulus-check
+```
+or npm
+```sh
+npm install modulus-check
 ```
 
 ## Usage
@@ -56,9 +60,9 @@ npm version [<newversion> | major | minor | patch] -m "Release %s"
 MIT
 
 ## Credits
-Many thanks to [bazerk/uk-modulus-checking](https://github.com/bazerk/uk-modulus-checking) for the original inspiration.
+Many thanks to [bazerk/uk-modulus-checking](https://github.com/bazerk/uk-modulus-checking) for the original inspiration and [uphold/uk-modulus-checking](https://github.com/uphold/uk-modulus-checking) .
 
-[npm-image]: https://img.shields.io/npm/v/uk-modulus-checking.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/uk-modulus-checking
-[travis-image]: https://img.shields.io/travis/uphold/uk-modulus-checking.svg?style=flat-square
-[travis-url]: https://img.shields.io/travis/uphold/uk-modulus-checking.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/modulus-check.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/modulus-check
+[travis-image]: https://img.shields.io/travis/@usecomma/modulus-check.svg?style=flat-square
+[travis-url]: https://img.shields.io/travis/@usecomma/modulus-check.svg?style=flat-square

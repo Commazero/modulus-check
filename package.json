@@ -2,17 +2,19 @@
   "name": "modulus-check",
   "version": "0.1.4",
   "description": "Validate a UK bank account number against a sort code using the VocaLink modulus check",
-  "author": "Uphold",
+  "author": "Comma",
   "license": "MIT",
-  "homepage": "https://github.com/uphold/uk-modulus-checking",
-  "bugs": "https://github.com/uphold/uk-modulus-checking/issues",
+  "homepage": "https://github.com/Commazero/modulus-check",
+  "bugs": "https://github.com/Commazero/modulus-check/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/uphold/uk-modulus-checking.git"
+    "url": "https://github.com/Commazero/modulus-check.git"
   },
   "main": "dist/index.js",
   "keywords": [
-    "vocalink"
+    "vocalink",
+    "modulus",
+    "sort code validation"
   ],
   "options": {
     "mocha": "--compilers js:babel-register --recursive --require should"

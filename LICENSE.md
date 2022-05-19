@@ -1,6 +1,6 @@
 ## MIT License
 
-Copyright (c) 2016-2019 Uphold
+Copyright (c) 2016-2022 Uphold, 2022 Comma Payments
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

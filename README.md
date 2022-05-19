@@ -10,14 +10,14 @@ Install the package via `yarn`:
 ```sh
 yarn add modulus-check
 ```
-or npm
+or `npm`:
 ```sh
 npm install modulus-check
 ```
 
 ## Usage
 
-### `new UkModulusChecking({ accountNumber, sortCode }).isValid()`
+### `new ModulusCheck({ accountNumber, sortCode }).isValid()`
 
 This method validates if the given accountNumber and sortCode represent a valid `Faster Payment Account`.
 
@@ -31,16 +31,16 @@ This method validates if the given accountNumber and sortCode represent a valid 
 
 #### Example
 ```js
-new UkModulusChecking({ accountNumber: '15764273', sortCode: '938063' }).isValid();
+new ModulusCheck({ accountNumber: '15764273', sortCode: '938063' }).isValid();
 // => false
 
-new UkModulusChecking({ accountNumber: '66374958', sortCode: '089999' }).isValid();
+new ModulusCheck({ accountNumber: '66374958', sortCode: '089999' }).isValid();
 // => true
 
-new UkModulusChecking({ accountNumber: '66374958', sortCode: '08-99-99' }).isValid();
+new ModulusCheck({ accountNumber: '66374958', sortCode: '08-99-99' }).isValid();
 // => true
 
-new UkModulusChecking({ accountNumber: '66374958', sortCode: '08-9999' }).isValid();
+new ModulusCheck({ accountNumber: '66374958', sortCode: '08-9999' }).isValid();
 // => true
 ```
 
@@ -60,7 +60,7 @@ npm version [<newversion> | major | minor | patch] -m "Release %s"
 MIT
 
 ## Credits
-Many thanks to [bazerk/uk-modulus-checking](https://github.com/bazerk/uk-modulus-checking) for the original inspiration and [uphold/uk-modulus-checking](https://github.com/uphold/uk-modulus-checking) .
+Many thanks to [bazerk/uk-modulus-checking](https://github.com/bazerk/uk-modulus-checking) for the original inspiration and [uphold/uk-modulus-checking](https://github.com/uphold/uk-modulus-checking) for the initial development.
 
 [npm-image]: https://img.shields.io/npm/v/modulus-check.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/@usecomma/modulus-check

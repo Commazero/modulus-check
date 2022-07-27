@@ -264,7 +264,7 @@ export default class UkModulusChecking {
    */
 
   loadValacdos() {
-    const content = fs.readFileSync(`${__dirname}/data/valacdos-v7-10-updated.txt`, 'utf8');
+    const content = fs.readFileSync(`${__dirname}/data/valacdos-v7-30-updated.txt`, 'utf8');
     const valacdos = [];
 
     content.split('\r\n').forEach((line) => {

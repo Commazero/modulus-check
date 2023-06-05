@@ -25,7 +25,8 @@
     "prepublish": "npm run transpile",
     "testdocker": "docker-compose run --rm sut",
     "test": "mocha $npm_package_options_mocha",
-    "transpile": "rm -rf dist/* && babel src --out-dir dist"
+    "transpile": "rm -rf dist/* && babel src --out-dir dist",
+    "build:ci": "make -s -C .circleci circle-config"
   },
   "devDependencies": {
     "babel-cli": "^6.4.0",

@@ -1,4 +1,8 @@
 executors:
+  node-medium:
+    docker:
+      - image: cimg/node:18.14.1
+    resource_class: medium
   node-small:
     docker:
       - image: cimg/node:18.14.1

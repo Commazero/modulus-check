@@ -1,0 +1,69 @@
+commands:
+    install_packages:
+        steps:
+            - checkout
+            - restore_cache:
+                key: v1-node-18.14.1-{{ checksum "yarn.lock" }}
+            - run: yarn install
+            - save_cache:
+                key: v1-node-18.14.1-{{ checksum "yarn.lock" }}
+                paths:
+                    - node_modules
+executors:
+    circle-small:
+        docker:
+            - image: cimg/base:2022.07
+        resource_class: small
+    node-medium:
+        docker:
+            - image: cimg/node:18.14.1
+        resource_class: medium
+    node-small:
+        docker:
+            - image: cimg/node:18.14.1
+        resource_class: small
+jobs:
+    install:
+        executor: node-medium
+        steps:
+            - install_packages
+    lint:
+        executor: node-small
+        steps:
+            - install_packages
+            - run:
+                command: yarn lint
+                name: Lint
+    tests:
+        executor: node-small
+        steps:
+            - install_packages
+            - run:
+                command: yarn test
+                name: Test
+    verify_circleci_config:
+        executor: circle-small
+        steps:
+            - checkout
+            - swissknife/build_and_check_circle_config:
+                custom-config: .circleci/config.yml
+                custom-error-message: Please run \"yarn build:ci\" and commit it.
+                fail-if-dirty: true
+orbs:
+    node: circleci/node@5.0.1
+    swissknife: roopakv/swissknife@0.69.0
+version: 2.1
+workflows:
+    code_validation:
+        jobs:
+            - verify_circleci_config
+            - install:
+                requires:
+                    - verify_circleci_config
+            - lint:
+                requires:
+                    - install
+            - tests:
+                requires:
+                    - install
+

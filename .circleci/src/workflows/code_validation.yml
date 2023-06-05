@@ -1,0 +1,11 @@
+jobs:
+  - verify_circleci_config
+  - install:
+      requires:
+        - verify_circleci_config
+  - lint:
+      requires:
+        - install
+  - tests:
+      requires:
+        - install

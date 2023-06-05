@@ -1,0 +1,7 @@
+executor: circle-small
+steps:
+  - checkout
+  - swissknife/build_and_check_circle_config:
+      custom-error-message: Please run \"yarn build:ci\" and commit it.
+      fail-if-dirty: true
+      custom-config: .circleci/config.yml

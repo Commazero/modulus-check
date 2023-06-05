@@ -1,0 +1,3 @@
+executor: node-medium
+steps:
+  - install_packages

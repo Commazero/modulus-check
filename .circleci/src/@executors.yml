@@ -1,0 +1,13 @@
+executors:
+  node-medium:
+    docker:
+      - image: cimg/node:18.14.1
+    resource_class: medium
+  node-small:
+    docker:
+      - image: cimg/node:18.14.1
+    resource_class: small
+  circle-small:
+    docker:
+      - image: cimg/base:2022.07
+    resource_class: small

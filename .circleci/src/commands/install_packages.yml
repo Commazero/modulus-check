@@ -1,0 +1,9 @@
+steps:
+  - checkout
+  - restore_cache:
+      key: v1-node-18.14.1-{{ checksum "yarn.lock" }}
+  - run: yarn install
+  - save_cache:
+      key: v1-node-18.14.1-{{ checksum "yarn.lock" }}
+      paths:
+        - node_modules

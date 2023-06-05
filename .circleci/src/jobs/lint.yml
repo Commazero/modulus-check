@@ -1,0 +1,6 @@
+executor: node-small
+steps:
+  - install_packages
+  - run:
+      name: "Lint"
+      command: yarn lint

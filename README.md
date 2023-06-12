@@ -51,10 +51,11 @@ npm test
 ```
 
 ## Release
-
+Run the below command and commit to `master` branch
 ```sh
 npm version [<newversion> | major | minor | patch] -m "Release %s"
 ```
+Head to circelci and trigger a new pipeline with parameter `release: true`
 
 ## License
 MIT

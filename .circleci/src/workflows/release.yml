@@ -1,6 +1,6 @@
 when:
   and:
-    - not: << pipeline.parameters.release >>
+    - << pipeline.parameters.release >>
 jobs:
   - verify_circleci_config
   - install:
@@ -12,3 +12,7 @@ jobs:
   - tests:
       requires:
         - install
+  - release:
+      requires:
+        - lint
+        - tests

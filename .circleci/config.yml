@@ -14,17 +14,13 @@ executors:
         docker:
             - image: cimg/base:2022.07
         resource_class: small
-    node-medium:
-        docker:
-            - image: cimg/node:18.14.1
-        resource_class: medium
     node-small:
         docker:
             - image: cimg/node:18.14.1
         resource_class: small
 jobs:
     install:
-        executor: node-medium
+        executor: node-small
         steps:
             - install_packages
     lint:
@@ -34,6 +30,15 @@ jobs:
             - run:
                 command: yarn lint
                 name: Lint
+    release:
+        executor: node-small
+        steps:
+            - checkout
+            - run:
+                command: |
+                    npm set //registry.npmjs.org/:_authToken=$NPM_ACCESS_TOKEN
+                    npm publish
+                name: Publish to NPM
     tests:
         executor: node-small
         steps:
@@ -52,6 +57,10 @@ jobs:
 orbs:
     node: circleci/node@5.0.1
     swissknife: roopakv/swissknife@0.69.0
+parameters:
+    release:
+        default: false
+        type: boolean
 version: 2.1
 workflows:
     code_validation:
@@ -66,4 +75,26 @@ workflows:
             - tests:
                 requires:
                     - install
+        when:
+            and:
+                - not: << pipeline.parameters.release >>
+    release:
+        jobs:
+            - verify_circleci_config
+            - install:
+                requires:
+                    - verify_circleci_config
+            - lint:
+                requires:
+                    - install
+            - tests:
+                requires:
+                    - install
+            - release:
+                requires:
+                    - lint
+                    - tests
+        when:
+            and:
+                - << pipeline.parameters.release >>
 

@@ -1,0 +1,4 @@
+parameters:
+  release:
+    type: boolean
+    default: false

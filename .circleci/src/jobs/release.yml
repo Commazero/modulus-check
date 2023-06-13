@@ -1,0 +1,8 @@
+executor: node-small
+steps:
+  - checkout
+  - run:
+      name: "Publish to NPM"
+      command: |
+        npm set //registry.npmjs.org/:_authToken=$NPM_ACCESS_TOKEN
+        npm publish

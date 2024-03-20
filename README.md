@@ -1,3 +1,5 @@
+:no_entry: **NOT MAINTAINED** - This repository is not maintained anymore
+
 # modulus-check
 Modulus checking allows payment originators to confirm that customer codes and account numbers are compatible before submitting a Bacs Direct Credit of Direct Debit.
 

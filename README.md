@@ -1,3 +1,9 @@
+:no_entry: **NOT MAINTAINED** 
+
+This repository is not maintained anymore. 
+Please consider using the original [uphold/uk-modulus-checking](https://github.com/uphold/uk-modulus-checking) repo and update the `src/data` files.
+
+
 # modulus-check
 Modulus checking allows payment originators to confirm that customer codes and account numbers are compatible before submitting a Bacs Direct Credit of Direct Debit.
 
